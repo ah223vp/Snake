@@ -21,8 +21,11 @@ public class Painter implements IObserver {
     }
 
     @Override
-    public Segment drawFood() {
-        return null;
+    public void drawFood() {
+    	snake.getFood();
+    	//this.context.clearRect(0, 0, 1000, 1000);
+    	this.context.setFill(snake.getFood().getColor());
+    	this.context.fillRect(snake.getFood().getX(), snake.getFood().getY(), 50, 50);
     }
 
     @Override

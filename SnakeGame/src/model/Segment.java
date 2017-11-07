@@ -20,5 +20,20 @@ public class Segment {
     public Color getColor(){
         return color;
     }
+    public void setX(Double x) {
+    	this.x = x;
+    }
+    public void setY(Double y) {
+    	this.y = y;
+    }
+    public boolean equals(Segment s) {
+    	if((s.x == this.x) && (s.y == this.y)) {
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+    	
+    }
 
 }

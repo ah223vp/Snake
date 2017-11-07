@@ -8,6 +8,7 @@ public class SnakeGame {
     private int fps = 15;
     private Snake snake;
 
+
     public SnakeGame(){
         this.snake = new Snake();
     }
@@ -27,6 +28,9 @@ public class SnakeGame {
                 // Framerate
                 if(now - lastUpdate >= 1000_000_000){
                     snake.move();
+                    System.out.println("Snake size is: " + snake.getBody().size());
+                   
+                    snake.drawFood();
                     lastUpdate = now;
                 }
 
