@@ -35,7 +35,7 @@ public class Painter implements IObserver {
         for(Segment s: this.snake.getBody()){
             this.context.setFill(s.getColor());
             this.context.fillRect(s.getX(),s.getY(),50,50);
-            System.out.println(s.getX());
+            System.out.println("Segment: " + s + " X = " + s.getX());
         }
 
     }
